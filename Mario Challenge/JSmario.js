@@ -11,7 +11,7 @@ const floor3 = document.querySelector('.floor-3');
 const gameOveraudio = new Audio('sounds/die.mp3');
 const themeAudio = new Audio("sounds/theme.mp3");
 
-themeAudio.play();
+
 
 function grassAnimation(){
     grass.classList.add('grass-animation');
@@ -42,6 +42,7 @@ const jump = () => {
 startGame.addEventListener('click', Start);
 
 function Start(){
+    themeAudio.play();
     startGame.style.opacity = '0%';
     const loop = setInterval(()=>{
         const pipePosition = pipe.offsetLeft;
