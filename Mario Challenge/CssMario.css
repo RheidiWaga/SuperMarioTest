@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.boardGame {
+  background: linear-gradient(rgb(53, 118, 204), white);
+  width: 700px;
+  height: 800px;
+  margin: auto;
+  border: 5px solid black;
+  position: relative;
+  overflow: hidden;
+}
+
+#ground {
+  background-image: linear-gradient(#0f8d48, rgb(56, 9, 9) 50%);
+  color: #0f8d48;
+  position: absolute;
+  height: 30px;
+  width: 1000px;
+  bottom: 0px;
+}
+#cloud1 {
+  position: absolute;
+  width: 500px;
+  margin-top: 100px;
+  animation: cloud-animation infinite linear 20s;
+}
+#cloud2 {
+  position: absolute;
+  width: 200px;
+  margin-top: 350px;
+  animation: cloud-animation infinite linear 50s;
+}
+
+#pipe {
+  position: absolute;
+  width: 100px;
+  bottom: 30px;
+  animation: pipe-animation infinite linear 1s;
+}
+
+#mario {
+  width: 150px;
+  position: absolute;
+  bottom: 34px;
+}
+#backGround {
+  width: 700px;
+  bottom: -200px;
+}
+
+.jump {
+  animation: jump 500ms ease-out;
+}
+
+#gameOver {
+  position: absolute;
+  width: 400px;
+  left: 140px;
+  opacity: 0%;
+}
+#buttonReset {
+  position: absolute;
+  width: 130px;
+  left: 270px;
+  bottom: 450px;
+  opacity: 0%;
+}
+#buttonReset:hover {
+  width: 135px;
+  bottom: 455px;
+  box-shadow: 1px 2px 5px 2px black;
+  background: rgb(196, 4, 4);
+}
+#startGame {
+  position: absolute;
+  width: 200px;
+  left: 230px;
+  bottom: 250px;
+}
+#startGame:hover {
+  width: 205px;
+  left: 230px;
+  bottom: 260px;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  40% {
+    bottom: 250px;
+  }
+  50% {
+    bottom: 250px;
+  }
+  60% {
+    bottom: 250px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes cloud-animation {
+  from {
+    right: -500px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes pipe-animation {
+  from {
+    right: -100px;
+  }
+  to {
+    right: 100%;
+  }
+}
+.grass {
+  position: absolute;
+  bottom: 0;
+  width: 160px;
+  right: -160px;
+  padding-bottom: 34px;
+}
+
+.grass-animation {
+  animation: grass-animation 3s infinite linear;
+}
+
+@keyframes grass-animation {
+  from {
+    right: -500px;
+  }
+  to {
+    right: 100%;
+  }
+}
+.floor {
+  width: 1500px;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 34px;
+}
+.floor-1 {
+  position: absolute;
+}
+.floor-2 {
+  position: absolute;
+  right: -1500px;
+}
+.floor-3 {
+  position: absolute;
+  right: -1500px;
+}
+.floor-animation-1 {
+  animation: floor-animation-1 3.1s infinite linear;
+}
+.floor-animation-2 {
+  animation: floor-animation-2 6.2s infinite linear;
+}
+.floor-animation-3 {
+  animation: floor-animation-3 6.2s infinite linear;
+}
+
+@keyframes floor-animation-1 {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes floor-animation-2 {
+  0% {
+    right: -1499px;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes floor-animation-3 {
+  0% {
+    right: -1499px;
+  }
+  100% {
+    right: 100%;
+  }
+}
